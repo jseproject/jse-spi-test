@@ -66,6 +66,11 @@ public class TestDecode {
     }
 
     @Test
+    public void testDecodeMP2() throws UnsupportedAudioFileException, IOException {
+        testDecode("mp2");
+    }
+
+    @Test
     public void testDecodeAAC() throws UnsupportedAudioFileException, IOException {
         testDecode("aac");
     }
