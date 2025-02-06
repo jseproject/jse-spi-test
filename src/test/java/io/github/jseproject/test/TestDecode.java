@@ -1,6 +1,6 @@
-package org.jseproject.test;
+package io.github.jseproject.test;
 
-import javasound.enhancement.sampled.Audios;
+import javasound.sampled.Audios;
 import org.junit.jupiter.api.Test;
 
 import javax.sound.sampled.AudioFormat;
@@ -22,7 +22,7 @@ public class TestDecode {
                     encodedInputStream);
         }
 
-        Audios.getAudioFileFormat(Thread.currentThread().getContextClassLoader(), AUDIO_FILE_NAME + "." + extension);
+        System.out.println(Audios.getAudioFileFormat(Thread.currentThread().getContextClassLoader(), AUDIO_FILE_NAME + "." + extension));
     }
 
     @Test
@@ -73,6 +73,16 @@ public class TestDecode {
     @Test
     public void testDecodeAAC() throws UnsupportedAudioFileException, IOException {
         testDecode("aac");
+    }
+
+    @Test
+    public void testDecodeAPE() throws UnsupportedAudioFileException, IOException {
+        testDecode("ape");
+    }
+
+    @Test
+    public void testDecodeWavPack() throws UnsupportedAudioFileException, IOException {
+        testDecode("wv");
     }
 
 }

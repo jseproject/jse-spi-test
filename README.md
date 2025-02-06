@@ -1,2 +1,2 @@
-# JavaSound Enhancement Project - Service Provider Interface Test
+# JavaSound Enhancement Project SPI Test
 Seperated test project with bundled audio data.
